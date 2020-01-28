@@ -1,0 +1,15 @@
+<launch>
+
+	<node pkg="final" type="PlannerNode.py" name="PlannerNode" output="screen">
+        <param name="static_map" type="string" value="static_map" />
+        <param name="halton_points" type="int" value="1000" />
+        <param name="disc_radius" type="int" value="3" />
+        <param name="collision_delta" type="double" value="0.25" />
+        <param name="source_topic" type="string" value="/initialpose" />
+        <param name="target_topic" type="string" value="/move_base_simple/goal" />
+        <param name="pub_topic" type="string" value="/planner_node/car_plan_new" />
+        <param name="service_topic" type="string" value="/planner_node/get_car_plan" />
+        <param name="pose_topic" value="/sim_car_pose/pose"/>
+	</node>
+
+</launch>

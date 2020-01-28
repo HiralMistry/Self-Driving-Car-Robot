@@ -1,0 +1,8 @@
+<launch>
+        
+	<node pkg="final" type="ObstacleManager.py" name="ObstacleManager" output="screen">
+        <param name="static_map" type="string" value="static_map" />
+        <param name="collision_delta" type="double" value="0.15" />
+	</node>
+
+</launch>
